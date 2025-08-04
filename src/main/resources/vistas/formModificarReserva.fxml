@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="900.0" style="-fx-background-color: #F3FBFC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsierra.controlador.ControladorFormularioReserva">
+   <children>
+      <Label layoutX="387.0" layoutY="14.0" text="Modificar reserva">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font></Label>
+      <Label layoutX="20.0" layoutY="70.0" text="Documento cliente:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoDocumentoClienteReserva" layoutX="138.0" layoutY="67.0" style="-fx-border-color: CFDBDD;" />
+      <Button fx:id="btnBuscarClienteReserva" layoutX="312.0" layoutY="67.0" mnemonicParsing="false" onAction="#buscarClientePorDocumento" prefHeight="29.0" prefWidth="82.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Buscar">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnAgregarClienteReserva" disable="true" layoutX="404.0" layoutY="67.0" mnemonicParsing="false" onAction="#abrirFormularioClienteReserva" prefHeight="29.0" prefWidth="118.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #CFDBDD; -fx-border-color: #889A9E;" text="Agregar cliente">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnCancelarReserva" layoutX="337.0" layoutY="610.0" mnemonicParsing="false" onAction="#cancelarReserva" prefHeight="29.0" prefWidth="91.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Cancelar">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnAceptarReserva" layoutX="489.0" layoutY="610.0" mnemonicParsing="false" onAction="#modificarReserva" prefHeight="29.0" prefWidth="91.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Aceptar">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Button>
+      <Label layoutX="165.0" layoutY="186.0" text="Cant. de habitaciones:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoCantidadHabitaciones" layoutX="195.0" layoutY="206.0" prefHeight="25.0" prefWidth="66.0" style="-fx-border-color: CFDBDD;" />
+      <TextField fx:id="campoCantidadHuespedes" layoutX="195.0" layoutY="269.0" prefHeight="25.0" prefWidth="66.0" style="-fx-border-color: CFDBDD;" />
+      <Label layoutX="166.0" layoutY="249.0" text="Cant. de huéspedes:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <Label layoutX="16.0" layoutY="186.0" text="Fecha de llegada:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="249.0" text="Fecha de salida:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <DatePicker fx:id="dpFechaLlegadaReserva" layoutX="16.0" layoutY="206.0" prefHeight="25.0" prefWidth="131.0" />
+      <DatePicker fx:id="dpFechaSalidaReserva" layoutX="16.0" layoutY="270.0" prefHeight="25.0" prefWidth="131.0" />
+      <ComboBox fx:id="cbxAbonoReserva" layoutX="621.0" layoutY="456.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="445.0" layoutY="459.0" text="¿Abonó 50% de reserva?">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <Label layoutX="191.0" layoutY="458.0" text="Monto de la reserva:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoMontoReserva" editable="false" layoutX="316.0" layoutY="455.0" prefHeight="25.0" prefWidth="97.0" style="-fx-border-color: CFDBDD;" />
+      <ComboBox fx:id="cbxEstadoReserva" disable="true" layoutX="581.0" layoutY="543.0" prefHeight="25.0" prefWidth="106.0" />
+      <Label layoutX="450.0" layoutY="546.0" text="Estado de la reserva:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoCostoTotal" editable="false" layoutX="589.0" layoutY="408.0" prefHeight="25.0" prefWidth="97.0" style="-fx-border-color: CFDBDD;" />
+      <Label layoutX="444.0" layoutY="412.0" text="Costo total:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <Label layoutX="122.0" layoutY="125.0" />
+      <Label layoutX="76.0" layoutY="121.0" text="Nombre:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <Label layoutX="319.0" layoutY="121.0" text="Apellido:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoNombreClienteReserva" disable="true" layoutX="138.0" layoutY="117.0" style="-fx-border-color: CFDBDD;" />
+      <TextField fx:id="campoApellidoClienteReserva" disable="true" layoutX="375.0" layoutY="117.0" style="-fx-border-color: CFDBDD;" />
+      <Label layoutX="534.0" layoutY="134.0" />
+      <Separator layoutX="11.0" layoutY="175.0" prefHeight="5.0" prefWidth="889.0" />
+      <Separator layoutY="386.0" prefHeight="5.0" prefWidth="900.0" />
+      <Label layoutX="316.0" layoutY="184.0" prefHeight="19.0" prefWidth="173.0" text="Seleccione la/s habitacion/es:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <Button fx:id="btnBuscarHabitacionReserva" layoutX="187.0" layoutY="348.0" mnemonicParsing="false" onAction="#buscarHabitacionesDisponibles" prefHeight="29.0" prefWidth="82.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Buscar">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Button>
+      <ListView fx:id="listaHabitacionesReserva" layoutX="318.0" layoutY="207.0" prefHeight="178.0" prefWidth="419.0" />
+      <TextField fx:id="campoCostoNoche" editable="false" layoutX="316.0" layoutY="408.0" prefHeight="25.0" prefWidth="97.0" style="-fx-border-color: CFDBDD;" />
+      <Label layoutX="191.0" layoutY="412.0" text="Costo por noche:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <Button fx:id="btnCalcularCostos" layoutX="751.0" layoutY="348.0" mnemonicParsing="false" onAction="#calcularCostos" prefHeight="29.0" prefWidth="126.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Calcular costos">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Button>
+      <Label layoutX="450.0" layoutY="502.0" text="Monto abonado:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoMontoAbonado" layoutX="585.0" layoutY="498.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: CFDBDD;" />
+      <ComboBox fx:id="cbxTipoHabitacionReserva" layoutX="16.0" layoutY="330.0" prefHeight="25.0" prefWidth="131.0" />
+      <Label layoutX="21.0" layoutY="311.0" text="Tipo de habitación:">
+         <font>
+            <Font name="Segoe UI Symbol" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

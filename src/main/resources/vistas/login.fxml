@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F3FBFC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsierra.controlador.ControladorLogin">
+   <children>
+      <Button fx:id="btnIngresarLogin" layoutX="351.0" layoutY="335.0" mnemonicParsing="false" onAction="#ingresarLogin" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Ingresar">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="btnSalirLogin" layoutX="204.0" layoutY="335.0" mnemonicParsing="false" onAction="#salirLogin" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Salir">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label fx:id="lblDNI" layoutX="241.0" layoutY="123.0" text="DNI:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label fx:id="lblContrasenia" layoutX="241.0" layoutY="198.0" prefHeight="19.0" prefWidth="77.0" text="Contraseña:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoDni" layoutX="239.0" layoutY="148.0" style="-fx-border-color: # CFDBDD;" />
+      <PasswordField fx:id="campoContrasenia" layoutX="239.0" layoutY="221.0" style="-fx-border-color: # CFDBDD;" />
+      <Label layoutX="241.0" layoutY="64.0" text="Iniciar sesión">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

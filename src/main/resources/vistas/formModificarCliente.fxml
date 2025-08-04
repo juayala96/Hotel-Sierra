@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="654.0" style="-fx-background-color: #F3FBFC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsierra.controlador.ControladorFormularioCliente">
+   <children>
+      <Label layoutX="30.0" layoutY="105.0" text="Nombre:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoNombreCliente" layoutX="133.0" layoutY="101.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="30.0" layoutY="144.0" text="Apellido:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoApellidoCliente" layoutX="133.0" layoutY="140.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="282.0" layoutY="32.0" prefHeight="27.0" prefWidth="141.0" text="Modificar cliente">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="226.0" text="Documento:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoDocumentoCliente" layoutX="134.0" layoutY="224.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="379.0" layoutY="97.0" text="Dirección:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoDireccionCliente" layoutX="448.0" layoutY="93.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="379.0" layoutY="134.0" text="Localidad:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoLocalidadCliente" layoutX="448.0" layoutY="130.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="379.0" layoutY="173.0" text="Provincia:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoProvinciaCliente" layoutX="448.0" layoutY="169.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="378.0" layoutY="271.0" text="CP:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoCodigoPostalCliente" layoutX="447.0" layoutY="267.0" prefHeight="27.0" prefWidth="55.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="26.0" layoutY="271.0" prefHeight="19.0" prefWidth="124.0" text="Fecha de nacimiento:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <DatePicker fx:id="dpFechaDeNacimientoCliente" layoutX="152.0" layoutY="268.0" prefHeight="25.0" prefWidth="133.0" />
+      <ComboBox fx:id="cbxTipoCliente" layoutX="134.0" layoutY="358.0" prefWidth="150.0" />
+      <Label layoutX="30.0" layoutY="361.0" text="Tipo de cliente:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="372.0" layoutY="361.0" text="Telefono:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoTelefonoCliente" layoutX="440.0" layoutY="357.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="373.0" layoutY="318.0" text="Email: ">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoEmailCliente" layoutX="440.0" layoutY="314.0" style="-fx-border-color: #CFDBDD;" />
+      <ComboBox fx:id="cbxTipoDocumentoCliente" layoutX="160.0" layoutY="182.0" prefHeight="25.0" prefWidth="124.0" />
+      <Label layoutX="30.0" layoutY="185.0" text="Tipo de documento:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="31.0" layoutY="318.0" text="Nacionalidad:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoNacionalidadCliente" layoutX="134.0" layoutY="314.0" style="-fx-border-color: #CFDBDD;" />
+      <Button fx:id="btnCancelarCliente" layoutX="201.0" layoutY="412.0" mnemonicParsing="false" onAction="#cancelarCliente" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Cancelar">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="btnAceptarCliente" layoutX="391.0" layoutY="412.0" mnemonicParsing="false" onAction="#modificarCliente" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Aceptar">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label layoutX="379.0" layoutY="217.0" text="Pais:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoPaisCliente" layoutX="448.0" layoutY="213.0" style="-fx-border-color: #CFDBDD;" />
+   </children>
+</AnchorPane>

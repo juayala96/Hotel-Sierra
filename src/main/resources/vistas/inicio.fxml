@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsierra.controlador.ControladorInicio">
+    <children>
+        <AnchorPane prefHeight="222.0" prefWidth="1150.0" style="-fx-background-color: #ABBABD;">
+            <children>
+                <Button fx:id="btnBuscarHabitacionesInicio" layoutX="393.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: CFDBDD; -fx-border-color: #F3FBFC; -fx-border-radius: 90; -fx-background-radius: 90;" text="Buscar">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Button>
+                <DatePicker fx:id="dpFechaLlegadaInicio" layoutX="184.0" layoutY="77.0" />
+                <DatePicker fx:id="dpFechaSalidaInicio" layoutX="184.0" layoutY="144.0" />
+                <TextField fx:id="campoHabitacionesInicio" layoutX="396.0" layoutY="76.0" prefHeight="25.0" prefWidth="69.0" />
+                <TextField fx:id="campoHuespedesInicio" layoutX="396.0" layoutY="143.0" prefHeight="25.0" prefWidth="69.0" />
+                <Label layoutX="184.0" layoutY="54.0" text="Fecha de llegada">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Label>
+                <Label layoutX="184.0" layoutY="121.0" text="Fecha de salida">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Label>
+                <Label layoutX="396.0" layoutY="53.0" text="Habitaciones">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Label>
+                <Label layoutX="396.0" layoutY="120.0" text="Huespedes">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Label>
+            <Button fx:id="btnGenerarInforme" layoutX="892.0" layoutY="182.0" mnemonicParsing="false" onAction="#generarInforme" prefHeight="29.0" prefWidth="122.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #F3FBFC; -fx-background-radius: 90; -fx-border-radius: 90;" text="Generar informe">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Button>
+            <ComboBox fx:id="cbxMesInforme" layoutX="893.0" layoutY="58.0" prefHeight="25.0" prefWidth="112.0" />
+            <ComboBox fx:id="cbxAnioInforme" layoutX="893.0" layoutY="98.0" prefHeight="25.0" prefWidth="69.0" />
+            <ComboBox fx:id="cbxTipoHabitacionInforme" layoutX="891.0" layoutY="138.0" prefHeight="25.0" prefWidth="122.0" />
+            <Label layoutX="861.0" layoutY="61.0" text="Mes:">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Label>
+            <Label layoutX="861.0" layoutY="102.0" text="Año:">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Label>
+            <Label layoutX="781.0" layoutY="142.0" text="Tipo de habitación:">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font></Label>
+            <Label layoutX="326.0" layoutY="19.0" text="Consulta de habitaciones">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="880.0" layoutY="19.0" text="Informe de habitaciones">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="739.0" layoutY="-1.0" opacity="0.45" orientation="VERTICAL" prefHeight="222.0" prefWidth="4.0" />
+            <ComboBox fx:id="cbxTipoHabitacionConsulta" layoutX="495.0" layoutY="76.0" prefHeight="25.0" prefWidth="122.0" />
+            <Label layoutX="495.0" layoutY="54.0" text="Tipo de habitación:">
+               <font>
+                  <Font name="Segoe UI Symbol" size="13.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tablaHabitacionesInicio" layoutY="222.0" prefHeight="410.0" prefWidth="741.0">
+            <columns>
+                <TableColumn fx:id="colNumero" prefWidth="130.0" style="-fx-alignment: CENTER;" text="Número" />
+                <TableColumn fx:id="colCapacidad" prefWidth="124.0" style="-fx-alignment: CENTER;" text="Capacidad" />
+                <TableColumn fx:id="colCamasSingle" prefWidth="113.0" style="-fx-alignment: CENTER;" text="Camas Single" />
+                <TableColumn fx:id="colCamasDoble" prefWidth="89.0" style="-fx-alignment: CENTER;" text="Camas Doble" />
+                <TableColumn fx:id="colCategoria" prefWidth="139.0" style="-fx-alignment: CENTER;" text="Categoria" />
+                <TableColumn fx:id="colPrecio" prefWidth="144.0" style="-fx-alignment: CENTER;" text="Precio" />
+            </columns>
+            <placeholder>
+                <Label text="Habitaciones disponibles" />
+            </placeholder>
+        </TableView>
+      <PieChart fx:id="pieChartHabitaciones" layoutX="760.0" layoutY="222.0" prefHeight="392.0" prefWidth="390.0" title="Habitaciones" />
+    </children></AnchorPane>

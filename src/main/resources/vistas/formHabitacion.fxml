@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F3FBFC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsierra.controlador.ControladorFormularioHabitacion">
+   <children>
+      <Button fx:id="btnCancelarHabitacion" layoutX="192.0" layoutY="340.0" mnemonicParsing="false" onAction="#cancelarHabitacion" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Cancelar">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="btnAceptarHabitacion" layoutX="357.0" layoutY="340.0" mnemonicParsing="false" onAction="#crearHabitacion" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Aceptar">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label layoutX="237.0" layoutY="37.0" text="Registrar habitación">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font></Label>
+      <Label layoutX="91.0" layoutY="109.0" text="Número:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoNumeroHabitacion" layoutX="155.0" layoutY="106.0" prefHeight="27.0" prefWidth="51.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="75.0" layoutY="163.0" text="Capacidad:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoCapacidadHabitacion" layoutX="154.0" layoutY="161.0" prefHeight="27.0" prefWidth="51.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="26.0" layoutY="216.0" text="Cantidad de camas:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoCamasHabitacion" layoutX="155.0" layoutY="213.0" prefHeight="27.0" prefWidth="51.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="61.0" layoutY="279.0" text="Tipo de cama:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="343.0" layoutY="164.0" text="Categoría:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <ComboBox fx:id="cbxCategoriaHabitacion" layoutX="410.0" layoutY="160.0" prefHeight="25.0" prefWidth="118.0" />
+      <Label layoutX="343.0" layoutY="109.0" text="Precio:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoPrecioHabitacion" layoutX="410.0" layoutY="106.0" prefHeight="27.0" prefWidth="59.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="154.0" layoutY="257.0" text="Single ">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoCamaSingle" layoutX="154.0" layoutY="276.0" prefHeight="27.0" prefWidth="51.0" style="-fx-border-color: #CFDBDD;" />
+      <Label layoutX="223.0" layoutY="257.0" text="Doble">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoCamaDoble" layoutX="221.0" layoutY="276.0" prefHeight="27.0" prefWidth="51.0" style="-fx-border-color: #CFDBDD;" />
+      <ComboBox fx:id="cbxEstadoHabitacion" layoutX="372.0" layoutY="228.0" prefWidth="150.0" visible="false" />
+   </children>
+</AnchorPane>

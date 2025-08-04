@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F3FBFC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsierra.controlador.ControladorFormularioUsuarios">
+   <children>
+      <Button fx:id="btnCancelarUsuario" layoutX="184.0" layoutY="328.0" mnemonicParsing="false" onAction="#cancelarUsuario" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Cancelar">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="btnAceptarUsuario" layoutX="340.0" layoutY="328.0" mnemonicParsing="false" onAction="#modificarUsuario" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #CFDBDD; -fx-border-color: #889A9E; -fx-background-radius: 50; -fx-border-radius: 50;" text="Aceptar">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label layoutX="230.0" layoutY="36.0" text="Modificar Usuario">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblNombreUsuario" layoutX="52.0" layoutY="109.0" text="Nombre:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoNombreUsuario" layoutX="108.0" layoutY="105.0" style="-fx-border-color: #CFDBDD;" />
+      <Label fx:id="lblApellidoUsuario" layoutX="52.0" layoutY="179.0" text="Apellido:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoApellidoUsuario" layoutX="108.0" layoutY="175.0" style="-fx-border-color: #CFDBDD;" />
+      <Label fx:id="lblDniUsuario" layoutX="52.0" layoutY="243.0" text="DNI:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoDniUsuario" layoutX="108.0" layoutY="239.0" style="-fx-border-color: #CFDBDD;" />
+      <Label fx:id="lblEmailUsuario" layoutX="310.0" layoutY="109.0" text="Email:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoEmailUsuario" layoutX="386.0" layoutY="105.0" style="-fx-border-color: #CFDBDD;" />
+      <Label fx:id="lblContraseniaUsuario" layoutX="310.0" layoutY="179.0" prefHeight="17.0" prefWidth="75.0" text="Contraseña:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="campoContraseniaUsuario" layoutX="386.0" layoutY="175.0" style="-fx-border-color: #CFDBDD;" />
+      <ComboBox fx:id="cbxRolUsuario" layoutX="386.0" layoutY="240.0" prefWidth="150.0" />
+      <Label fx:id="lblRol" layoutX="310.0" layoutY="243.0" prefHeight="19.0" prefWidth="26.0" text="Rol:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,124 @@
+@startuml
+
+' Definición de clases
+class LoginUsuario {
+    +loginUsuario(dni: int, contrasenia: String): Integer
+    +obtenerNombreUsuario(idUsuario: int): String
+    +obtenerRolDelUsuario(idUsuario: int): String
+}
+
+class Usuario {
+    -idUsuario: int
+    -nombre: String
+    -apellido: String
+    -dni: Integer
+    -email: String
+    -contrasenia: String
+    -rol: String
+    +obtenerListaUsuarios(): ObservableList<Usuario>
+    +crearUsuario(...): boolean
+    +modificarUsuario(...): boolean
+    +eliminarUsuario(idUsuario: int): boolean
+}
+
+class Cliente {
+    -idCliente: int
+    -nombre: String
+    -apellido: String
+    -tipoDocumento: String
+    -documento: String
+    -fechaNacimiento: LocalDate
+    -nacionalidad: String
+    -direccion: String
+    -localidad: String
+    -provincia: String
+    -pais: String
+    -codigoPostal: String
+    -email: String
+    -telefono: String
+    -tipoCliente: String
+    +obtenerListaClientes(): ObservableList<Cliente>
+    +crearCliente(...): boolean
+    +modificarCliente(...): boolean
+    +eliminarCliente(idCliente: int): boolean
+    +obtenerClientePorDocumento(documento: String): Cliente
+    +toString(): String
+}
+
+class Habitacion {
+    -idHabitacion: int
+    -numero: Integer
+    -capacidad: Integer
+    -cantidadCamas: Integer
+    -camasSingle: Integer
+    -camasDoble: Integer
+    -categoria: String
+    -precio: Double
+    -estado: String
+    +obtenerListaHabitaciones(): ObservableList<Habitacion>
+    +crearHabitacion(...): boolean
+    +modificarHabitacion(...): boolean
+    +eliminarHabitacion(idHabitacion: int): boolean
+    +obtenerHabitacionPorId(idHabitacion: int): Habitacion
+    +toString(): String
+}
+
+class Reserva {
+    -idReserva: int
+    -cliente: Cliente
+    -cantidadHabitaciones: Integer
+    -cantidadHuespedes: Integer
+    -fechaLlegada: LocalDate
+    -fechaSalida: LocalDate
+    -categoria: String
+    -costoNoche: Double
+    -costoTotal: Double
+    -montoReserva: Double
+    -montoAbonado: Double
+    -abonoReserva: String
+    -estado: String
+    -habitaciones: String
+    -fechaCreacion: Timestamp
+    +obtenerListaReservas(): ObservableList<Reserva>
+    +obtenerHabitacionesPorReserva(idReserva: int): List<Habitacion>
+    +registrarReserva(...): boolean
+    +modificarReserva(...): boolean
+    +anularReserva(idReserva: int): boolean
+    +eliminarReserva(idReserva: int): boolean
+    +toString(): String
+}
+
+class InformeHabitaciones {
+    -numeroHabitacion: int
+    -totalReservas: int
+    -tipoHabitacion: String
+    +obtenerHabitacionesMasSolicitadas(mes: String, anio: int, tipoHabitacion: String): List<InformeHabitaciones>
+    +generarInformeHabitacionesMasSolicitadas(habitaciones: List<InformeHabitaciones>, mes: String, anio: int, tipoHabitacion: String): void
+    +convertirMesANumero(mes: String): int
+}
+
+class AnulacionReservaAutomatica {
+    -scheduler: ScheduledExecutorService
+    +iniciarAnulacionAutomatica(): void
+    -calcularDelayParaLaSiguienteEjecucion(): long
+    -anularReservasPendientes(): void
+}
+
+class Hotel {
+    +start(stage: Stage): void
+    +main(args: String[]): void
+}
+
+' Relación entre clases
+LoginUsuario --> Usuario: "Pertenece a"
+Usuario --> Hotel: "Es parte de"
+Cliente --> Reserva: "Hace una"
+Reserva --> Habitacion: "Contiene"
+Reserva --> Cliente: "Pertenencia"
+InformeHabitaciones --> Habitacion: "Genera reporte de"
+InformeHabitaciones --> Reserva: "Usa"
+Reserva --> AnulacionReservaAutomatica: "Anula automáticamente"
+Hotel --> Reserva: "Contiene"
+Hotel --> Habitacion: "Contiene"
+
+@enduml
