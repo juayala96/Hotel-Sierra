@@ -3,15 +3,12 @@ package com.example.hotelsierra.controlador;
 import com.example.hotelsierra.modelo.Habitacion;
 import com.example.hotelsierra.modelo.InformeHabitaciones;
 import com.example.hotelsierra.modelo.Inicio;
-import com.example.hotelsierra.modelo.Reserva;
-import com.itextpdf.layout.borders.Border;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.geometry.Side;
 import javafx.util.Callback;
 
 
